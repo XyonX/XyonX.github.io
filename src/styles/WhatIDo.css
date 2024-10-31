@@ -1,0 +1,87 @@
+.unreal-icon {
+  display: inline-block;
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  background-image: url("../assets/unreal.svg");
+  background-size: cover;
+}
+
+.what-do-item {
+  border-radius: 12px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.what-do-item i {
+  font-size: 35px;
+}
+.what-do-item.bg-prink i {
+  color: #d566ff;
+}
+.what-do-item.bg-catkrill i {
+  color: #dda10c;
+}
+.what-do-item.bg-catkrill i {
+  color: #ff6080;
+}
+.what-do-item.bg-prink.bg-blue i {
+  color: #269fff;
+}
+@media (max-width: 767px) {
+  .what-do-item {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .what-do-item {
+    flex-wrap: nowrap;
+  }
+}
+.what-do-item .text .title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px),
+  lg,
+  only screen and (min-width: 768px) and (max-width: 991px) {
+  .what-do-item .text .title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .what-do-item .text .title {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .what-do-item .text .title {
+    font-size: 24px;
+  }
+}
+.what-do-item .text p {
+  margin-bottom: 0;
+  line-height: 30px;
+}
+
+/*
+
+main menu
+
+*/
+.main-menu-wrap {
+  width: 144px;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  position: sticky;
+  top: -45px;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .main-menu-wrap {
+    width: 120px;
+    padding: 18px;
+  }
+}

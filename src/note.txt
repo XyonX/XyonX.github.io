@@ -1,0 +1,27 @@
+CSS INDEX
+=================== 
+01. common
+02. button
+03. page
+04. header
+05. personal info
+06. client
+07. what do
+08. resume
+09. portfolio
+10. blog
+11. contact
+12. preloader
+13. blog details
+14. sidebar
+15. dark theme
+
+
+  // mobile menu start
+  let menutoggole = document.querySelector(".toggle_menu");
+  let mobilemenu = document.querySelector(".mobile-menu");
+  menutoggole.onclick = function () {
+    menutoggole.classList.toggle("active");
+    mobilemenu.classList.toggle("active");
+  };
+  // mobile menu end

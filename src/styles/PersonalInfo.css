@@ -1,0 +1,225 @@
+.personal-info-area {
+  width: 400px;
+  border-radius: 20px;
+  background-color: var(--common-white);
+  text-align: center;
+  padding: 40px 30px;
+  margin-left: -100px;
+  position: sticky;
+  top: 100px;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .personal-info-area {
+    width: 340px;
+    margin-left: -40px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .personal-info-area {
+    width: 100%;
+    margin-left: 0px;
+    padding: 30px 15px;
+    top: -40px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 768px) and (max-width: 991px) {
+  .personal-info-area {
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    top: -40px;
+  }
+}
+@media (max-width: 767px) {
+  .personal-info-area {
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 30px;
+    padding: 40px 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .personal-info-area {
+    padding: 40px 30px;
+  }
+}
+
+.personal-info-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 21px;
+  margin-top: -180px;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .personal-info-img {
+    width: 210px;
+    height: 210px;
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px) {
+  .personal-info-img {
+    margin-top: 0px;
+  }
+}
+.personal-info-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personal-info-name {
+  font-size: 26px;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--common-black);
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 8px;
+}
+
+.btn-2.circle {
+  border-radius: 30px;
+}
+.dark-theme .btn-2.circle {
+  color: #fff;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .personal-info-name {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px) {
+  .personal-info-name {
+    font-size: 22px;
+  }
+}
+.personal-info-bio {
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--common-black);
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-white);
+  border-radius: 5px;
+  padding: 4px 20px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px),
+  only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px) {
+  .personal-info-bio {
+    font-size: 14px;
+  }
+}
+
+.personal-info-social-link li {
+  display: inline-block;
+  margin: 0 4px;
+}
+.personal-info-social-link li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--light-white);
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.personal-info-social-link .Github {
+  color: #000000;
+}
+.personal-info-social-link .Github:hover {
+  background: #18191a;
+  color: #fff;
+}
+.personal-info-social-link .twitter {
+  color: #1c9cea;
+}
+.personal-info-social-link .twitter:hover {
+  background: #1773ea;
+  color: #fff;
+}
+.personal-info-social-link .instagram {
+  color: #e12a72;
+}
+.personal-info-social-link .instagram:hover {
+  background: #e12a72;
+  color: #fff;
+}
+.personal-info-social-link .linkedin {
+  color: #144679;
+}
+.personal-info-social-link .linkedin:hover {
+  background: #144679;
+  color: #fff;
+}
+
+/* CONTACT */
+
+.personal-info-contact {
+  background-color: var(--light-white);
+  border-radius: 16px;
+  text-align: left;
+  padding: 20px 30px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .personal-info-contact {
+    padding: 20px 15px;
+  }
+}
+@media (max-width: 767px) {
+  .personal-info-contact {
+    padding: 20px 15px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .personal-info-contact {
+    padding: 20px 30px;
+  }
+}
+.personal-info-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.personal-info-contact-item:not(:first-child) {
+  border-top: 1px solid #e3e3e3;
+}
+.personal-info-contact-item .icon {
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-color: var(--common-white);
+  border-radius: 8px;
+  text-align: center;
+  line-height: 44px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .personal-info-contact-item .icon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+}
+.personal-info-contact-item .icon svg * {
+  transition: 0.3s;
+}
+.personal-info-contact-item i {
+  font-size: 22px;
+}

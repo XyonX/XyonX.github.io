@@ -1,0 +1,57 @@
+.page-content-wrap {
+  background-color: var(--common-white);
+  border-radius: 20px;
+}
+
+.page-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 50px; /* Remove duplicate padding */
+  padding-bottom: 60px;
+  background-image: url("../Assets/Images/bg-6.jpg"); /* Corrected extension */
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .page-wrapper {
+    padding-top: 120px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px) {
+  .page-wrapper {
+    padding-top: 120px;
+  }
+}
+
+.page-content-wrap {
+  background-color: var(--common-white);
+  border-radius: 20px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section-wrapper:is(.pl-60) {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .section-wrapper:is(.pl-60) {
+    padding-left: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section-wrapper:is(.pr-60) {
+    padding-right: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .section-wrapper:is(.pr-60) {
+    padding-right: 20px;
+  }
+}
