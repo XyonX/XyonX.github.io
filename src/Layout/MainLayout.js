@@ -5,6 +5,7 @@ import MenuBar from "../Components/MenuBar";
 import { useState } from "react";
 //Pages Compoent
 import AboutPage from "../Pages/AboutPage";
+import MobileMenu from "../Components/MobileMenu";
 
 function MainLayout() {
   const [page, setPage] = useState("AboutPage");

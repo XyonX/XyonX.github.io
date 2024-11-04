@@ -22,16 +22,18 @@ function PersonalInfo() {
                 <i className="fa-brands fa-github"></i>
               </a>
             </li>
+            {/* 
             <li>
               <a href="#" className="twitter">
                 <i className="fa-brands fa-twitter"></i>
               </a>
             </li>
+            
             <li>
               <a href="#" className="instagram">
                 <i className="fa-brands fa-instagram"></i>
               </a>
-            </li>
+            </li>*/}
             <li>
               <a
                 href="https://www.linkedin.com/in/joydip-chakraborty/"
@@ -59,7 +61,7 @@ function PersonalInfo() {
               </div>
               <div className="text">
                 <span>Email</span>
-                <p>joyydiip@mail.com</p>
+                <p>joyydiip@gmail.com</p>
               </div>
             </div>
 

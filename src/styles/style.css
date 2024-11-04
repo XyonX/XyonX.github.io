@@ -1979,7 +1979,7 @@ textarea:focus::placeholder {
   display: inline-flex;
   width: 45px;
   height: 45px;
-  background: white;
+  background-color: var(--common-white);
   border-radius: 50%;
   text-align: center;
   justify-content: center;
@@ -1987,9 +1987,11 @@ textarea:focus::placeholder {
   cursor: pointer;
   transition: 1s;
   overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 .header-menu-btn .menu-btn:hover {
-  background: black;
+  background-color: black;
+  color: #fff;
   span {
     background-color: rgb(255, 255, 255);
   }
@@ -2057,7 +2059,7 @@ textarea:focus::placeholder {
 .mobile-menu-wrap {
   position: relative;
 }
-.mobile-menu-wrap .mobile-menu {
+.mobile-menu-wrap .m-menu-wrap {
   position: absolute;
   top: 0;
   left: 0;
@@ -2067,18 +2069,18 @@ textarea:focus::placeholder {
   z-index: 5;
   transition: 0.5s;
 }
-.mobile-menu-wrap .mobile-menu .mean-bar {
+.mobile-menu-wrap .m-menu-wrap .mean-bar {
   background-color: var(--common-white);
   border-radius: 12px;
   box-shadow: 0px 6px 6px rgba(238, 238, 238, 0.2);
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav {
   margin-top: 0;
   background-color: var(--common-white);
 }
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li a {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li a {
   border: none;
   font-size: 13px;
   text-transform: capitalize;
@@ -2087,33 +2089,33 @@ textarea:focus::placeholder {
   padding: 5px 70px;
 }
 @media (max-width: 767px) {
-  .mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li a {
+  .mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li a {
     padding: 5px 0px;
   }
 }
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li a span {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li a span {
   display: inline-block;
 }
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li a span svg {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li a span svg {
   width: 16px !important;
   margin-right: 8px;
 }
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li a:hover {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li a:hover {
   color: var(--theme-secondary);
 }
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li a:hover span svg * {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li a:hover span svg * {
   fill: var(--theme-secondary);
 }
 @media (max-width: 767px) {
-  .mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li {
+  .mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li {
     padding: 0px 40px;
   }
 }
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li:is(.active) a {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li:is(.active) a {
   color: var(--theme-secondary);
 }
 .mobile-menu-wrap
-  .mobile-menu
+  .m-menu-wrap
   .mean-bar
   .mean-nav
   ul
@@ -2125,7 +2127,7 @@ textarea:focus::placeholder {
   fill: var(--theme-secondary);
 }
 
-.mobile-menu.active {
+.m-menu-wrap.active {
   transform: scaleY(1);
 }
 
@@ -2222,19 +2224,19 @@ textarea:focus::placeholder {
 .header-menu-btn .menu-btn {
   background: #ffffff;
 }
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li:is(.active) a {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li:is(.active) a {
   color: #1b74e4;
 }
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li:hover a {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li:hover a {
   color: #1b74e4;
 }
 
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li:hover a span img {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li:hover a span img {
   filter: saturate(20.5);
 }
 
 .mobile-menu-wrap
-  .mobile-menu
+  .m-menu-wrap
   .mean-bar
   .mean-nav
   ul
@@ -2245,12 +2247,12 @@ textarea:focus::placeholder {
   filter: saturate(20.5);
 }
 
-.mobile-menu-wrap .mobile-menu .mean-bar .mean-nav ul li a:hover span svg * {
+.mobile-menu-wrap .m-menu-wrap .mean-bar .mean-nav ul li a:hover span svg * {
   fill: #1b74e4;
 }
 
 .mobile-menu-wrap
-  .mobile-menu
+  .m-menu-wrap
   .mean-bar
   .mean-nav
   ul
@@ -3118,4 +3120,102 @@ main menu
 
 .dark-theme #page-wrapper {
   background-image: url("../Assets/Images/bg-6-dark.jpeg"); /* Corrected extension */
+}
+
+/* Mobile Menu */
+
+/* Parent container */
+.m-menu-wrapper {
+  display: flex;
+  justify-content: center; /* Centers child content when there's enough space */
+  overflow: hidden; /* Prevents overflow on the wrapper */
+}
+
+.mobile-menu-content {
+  background-color: #f8f9fa; /* Light background for better contrast */
+  padding: 5px 15px;
+  gap: 10px; /* Smaller gap between items */
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents wrapping */
+  align-items: center; /* Aligns items vertically in the middle */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  scrollbar-width: none; /* Hides scrollbar on Firefox */
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.mobile-menu-contentmobile-menu-content::-webkit-scrollbar {
+  display: none; /* Hides scrollbar on Chrome, Safari, and Edge */
+}
+
+.mobile-menu-item {
+  height: 100%;
+  padding: 0 15px; /* Adds padding for better tap area */
+  background-color: #e0e0e0; /* Slightly darker background for items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; /* More rounded corners for a modern look */
+  font-size: 14px; /* Slightly larger font for readability */
+  color: #333; /* Darker font color for better contrast */
+  text-align: center;
+  flex-shrink: 0; /* Prevents items from shrinking */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+  gap: 8px; /* Space between icon and text */
+}
+
+/* Style the icons */
+.mobile-menu-item i {
+  font-size: 16px;
+  color: #666; /* Subtle color for icons */
+}
+
+/* Hover and active effects */
+.mobile-menu-item:hover {
+  background-color: #d4d4d4; /* Slightly darker on hover */
+  transform: scale(1.05); /* Small scale-up effect on hover */
+}
+
+.mobile-menu-item:active {
+  background-color: #c0c0c0; /* Darker color when tapped */
+}
+
+.mobile-menu-content {
+  background-color: #f8f9fa; /* Light background for better contrast */
+  padding: 10px 15px;
+  gap: 25px; /* Smaller gap between items */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents wrapping */
+  align-items: center; /* Aligns items vertically in the middle */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  scrollbar-width: none; /* Hides scrollbar on Firefox */
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.mobile-menu-contentmobile-menu-content::-webkit-scrollbar {
+  display: none; /* Hides scrollbar on Chrome, Safari, and Edge */
+}
+
+.mobile-menu-item {
+  height: 100%;
+  padding: 0 20px; /* Adds padding for better tap area */
+  background-color: #e0e0e0; /* Slightly darker background for items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; /* More rounded corners for a modern look */
+  font-size: 14px; /* Slightly larger font for readability */
+  color: #333; /* Darker font color for better contrast */
+  text-align: center;
+  flex-shrink: 0; /* Prevents items from shrinking */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+  gap: 8px; /* Space between icon and text */
+}
+
+@media only screen and (min-width: 1400px) {
+  .m-menu-wrapper {
+    display: none;
+  }
 }
