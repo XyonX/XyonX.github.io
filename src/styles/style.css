@@ -1946,6 +1946,11 @@ textarea:focus::placeholder {
     margin-bottom: 50px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .header-area {
+    margin-bottom: 10px;
+  }
+}
 
 /* Header Wrap*/
 .header-wrap {
