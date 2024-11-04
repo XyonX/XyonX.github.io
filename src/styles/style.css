@@ -1876,6 +1876,11 @@ textarea:focus::placeholder {
   padding-bottom: 60px;
   background-image: url("../Assets/Images/bg-6.jpg"); /* Corrected extension */
 }
+@media only screen and (max-width: 767px) {
+  .page-wrapper {
+    padding-top: 10px;
+  }
+}
 /*
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .page-wrapper {
