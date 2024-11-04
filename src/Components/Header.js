@@ -4,8 +4,7 @@ function Header() {
       <div className="container">
         <div className="header-wrap">
           <div className="row align-items-center">
-            <div className="col-6"></div>
-            <div className="col-6">
+            <div className="col-12">
               <div className="header-menu-btn text-right">
                 <div className="dark-btn dark-btn-stored dark-btn-icon">
                   <i className="fa-solid fa-sun"></i>

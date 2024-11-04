@@ -1705,6 +1705,12 @@ textarea:focus::placeholder {
   }
 }
 
+.header-content {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* <<<<<<<    Declaration   >>>>>>>>> */
 .bg-cyan i {
   color: #8774ff;
@@ -1966,8 +1972,7 @@ textarea:focus::placeholder {
 /*Header Menu Button*/
 .header-menu-btn {
   display: flex;
-  align-items: center;
-  justify-content: end;
+  justify-content: space-between;
 }
 .header-menu-btn .menu-btn {
   position: relative;
