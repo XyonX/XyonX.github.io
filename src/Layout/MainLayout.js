@@ -10,7 +10,7 @@ function MainLayout() {
   const [page, setPage] = useState("AboutPage");
 
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper" id="page-wrapper">
       <Header />
       <div class="container z-index-3">
         <div class="row">

@@ -3037,3 +3037,85 @@ main menu
 .page-wrapper-2 .fillter-item .item-title:hover {
   color: #fa5252;
 }
+
+/*
+************
+*************************
+15. dark theme
+******************************************************* 
+*************************************************************** */
+
+.dark-theme .overly {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.dark-theme .page-wrapper .mobile-menu-wrap .mobile_menu .mean-bar,
+.dark-theme .page-wrapper .mobile-menu-wrap .mobile_menu .mean-bar .mean-nav,
+.dark-theme .page-wrapper .personal-info-contact,
+.dark-theme .page-wrapper .personal-info-bio,
+.dark-theme .page-wrapper .personal-info-social-link li a,
+.dark-theme .page-wrapper .main-style-2 .main-menu-wrap .main-menu ul li a {
+  background-color: #1d1d1d;
+}
+.dark-theme .page-wrapper .bg-light-white-2,
+.dark-theme .page-wrapper .blog-slider-single,
+.dark-theme .page-wrapper .fillter-item {
+  background-color: #0d0d0d;
+}
+.dark-theme .page-wrapper .knowledeges-item-wrap .gk-item {
+  background-color: #1c1c1c;
+}
+.dark-theme .page-wrapper .main-menu ul li,
+.dark-theme .page-wrapper .contact-item {
+  background-color: #212425;
+}
+.dark-theme .page-wrapper .main-menu ul li.active a {
+  color: #fff;
+}
+
+.dark-theme .page-wrapper .what-do-item,
+.dark-theme .page-wrapper .card-item,
+.dark-theme .page-wrapper .form-btn,
+.dark-theme
+  .page-wrapper
+  .mobile-menu-wrap
+  .mobile_menu
+  .mean-bar
+  .mean-nav
+  ul
+  li
+  a {
+  background-color: transparent;
+
+  .unreal-icon {
+    display: inline-block;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    background-image: url("../Assets/Images/unreal.svg");
+    background-size: cover;
+    filter: invert(1) saturate(5);
+  }
+}
+
+.dark-theme .main-menu-wrap {
+  background: transparent;
+}
+
+.dark-theme .page-wrapper .what-do-item,
+.dark-theme .page-wrapper .card-item,
+.dark-theme .page-wrapper .blog-slider-single,
+.dark-theme .page-wrapper .fillter-item {
+  border: 1px solid #212425;
+}
+
+.dark-theme #page-wrapper {
+  background-image: url("../Assets/Images/bg-6-dark.jpeg"); /* Corrected extension */
+}
