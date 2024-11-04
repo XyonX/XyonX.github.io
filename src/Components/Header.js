@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MobileMenu from "./MobileMenu";
 
-function Header() {
+function Header({ pageSetter }) {
   const [isDarkTheme, setIsDarkTheme] = useState(false); // Move state definition here
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   useEffect(() => {
@@ -46,50 +46,55 @@ function Header() {
   }, []);
 
   return (
-    <div className="header-area mb-30 z-index-5">
-      <div className="container">
-        <div className="header-wrap">
-          <div className="row align-items-center">
-            <div className="col-12">
-              <div className="header-menu-btn text-right">
-                <div
-                  className="dark-btn dark-btn-stored dark-btn-icon"
-                  onClick={toggleDarkTheme}
-                >
-                  <i
-                    className={`fa-solid ${
-                      isDarkTheme ? "fa-sun" : "fa-circle-half-stroke"
-                    }`}
-                  ></i>
-                </div>
-                <div
-                  className="menu-btn toggle_menu"
-                  onClick={toggleMobileMenu}
-                >
-                  <i
-                    className={`fa-solid ${
-                      showMobileMenu ? "fa-times" : "fa-bars"
-                    }`}
-                  ></i>
+    <>
+      <div className="header-area mb-30 z-index-5">
+        <div className="container">
+          <div className="header-wrap">
+            <div className="row align-items-center">
+              <div className="col-12">
+                <div className="header-menu-btn text-right">
+                  <div
+                    className="dark-btn dark-btn-stored dark-btn-icon"
+                    onClick={toggleDarkTheme}
+                  >
+                    <i
+                      className={`fa-solid ${
+                        isDarkTheme ? "fa-sun" : "fa-circle-half-stroke"
+                      }`}
+                    ></i>
+                  </div>
+                  <div
+                    className="menu-btn toggle_menu"
+                    onClick={toggleMobileMenu}
+                  >
+                    <i
+                      className={`fa-solid ${
+                        showMobileMenu ? "fa-times" : "fa-bars"
+                      }`}
+                    ></i>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="row-12">
-            <div
-              className="m-menu-wrapper"
-              style={{ display: showMobileMenu ? "flex" : "none" }}
-            >
-              <MobileMenu />
+            <div className={`fa-solid ${showMobileMenu ? "spaces" : ""}`}></div>
+
+            <div className="row-12">
+              <div
+                className="m-menu-wrapper"
+                style={{ display: showMobileMenu ? "flex" : "none" }}
+              >
+                <MobileMenu pageSetter={pageSetter} />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="mobile-menu-wrap">
-          <div className="mobile-menu mobile_menu"></div>
+          <div className="mobile-menu-wrap">
+            <div className="mobile-menu mobile_menu"></div>
+          </div>
         </div>
       </div>
-    </div>
+      {/*<div className="mobile-menu-vertical"></div>*/}
+    </>
   );
 }
 

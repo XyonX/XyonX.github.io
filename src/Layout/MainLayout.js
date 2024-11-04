@@ -3,16 +3,13 @@ import PersonalInfo from "../Components/PersonalInfo";
 import ContentSection from "../Components/ContentSection";
 import MenuBar from "../Components/MenuBar";
 import { useState } from "react";
-//Pages Compoent
-import AboutPage from "../Pages/AboutPage";
-import MobileMenu from "../Components/MobileMenu";
 
 function MainLayout() {
   const [page, setPage] = useState("AboutPage");
 
   return (
     <div className="page-wrapper" id="page-wrapper">
-      <Header />
+      <Header pageSetter={setPage} />
       <div class="container z-index-3">
         <div class="row">
           <PersonalInfo />

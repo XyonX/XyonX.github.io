@@ -1,4 +1,4 @@
-function MobileMenu({ pageSetter }) {
+function MobileMenu2({ pageSetter }) {
   const onSelectMenuResume = () => {
     pageSetter("ResumePage");
   };
@@ -7,7 +7,7 @@ function MobileMenu({ pageSetter }) {
   };
 
   return (
-    <div className="mobile-menu-content">
+    <div className="mobile-menu-content2">
       <div className="mobile-menu-item" onClick={onSelectMenuAbout}>
         <i className="fas fa-user"></i> {/* Icon */}
         <span>About</span>
@@ -32,4 +32,4 @@ function MobileMenu({ pageSetter }) {
   );
 }
 
-export default MobileMenu;
+export default MobileMenu2;

@@ -3135,40 +3135,28 @@ main menu
   display: flex;
   justify-content: center; /* Centers child content when there's enough space */
   overflow: hidden; /* Prevents overflow on the wrapper */
+  width: 100%;
+
+  background-color: var(--common-white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  border-radius: 5px;
+  padding-left: 5px;
 }
 
 .mobile-menu-content {
-  background-color: #f8f9fa; /* Light background for better contrast */
-  padding: 5px 15px;
   gap: 10px; /* Smaller gap between items */
   display: flex;
   overflow-x: auto; /* Enables horizontal scrolling */
   white-space: nowrap; /* Prevents wrapping */
   align-items: center; /* Aligns items vertically in the middle */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  padding: 5px 10px;
+  scroll-snap-type: x mandatory; /* Enables snapping */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
   scrollbar-width: none; /* Hides scrollbar on Firefox */
-  border-radius: 5px;
-  margin-top: 20px;
 }
 
-.mobile-menu-contentmobile-menu-content::-webkit-scrollbar {
+.mobile-menu-content::-webkit-scrollbar {
   display: none; /* Hides scrollbar on Chrome, Safari, and Edge */
-}
-
-.mobile-menu-item {
-  height: 100%;
-  padding: 0 15px; /* Adds padding for better tap area */
-  background-color: #e0e0e0; /* Slightly darker background for items */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px; /* More rounded corners for a modern look */
-  font-size: 14px; /* Slightly larger font for readability */
-  color: #333; /* Darker font color for better contrast */
-  text-align: center;
-  flex-shrink: 0; /* Prevents items from shrinking */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
-  gap: 8px; /* Space between icon and text */
 }
 
 /* Style the icons */
@@ -3195,23 +3183,6 @@ main menu
   color: black;
 }
 
-.mobile-menu-content {
-  background-color: #f8f9fa; /* Light background for better contrast */
-  padding: 10px 15px;
-  gap: 25px; /* Smaller gap between items */
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: nowrap; /* Prevents wrapping */
-  align-items: center; /* Aligns items vertically in the middle */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-  scrollbar-width: none; /* Hides scrollbar on Firefox */
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.mobile-menu-contentmobile-menu-content::-webkit-scrollbar {
-  display: none; /* Hides scrollbar on Chrome, Safari, and Edge */
-}
-
 .mobile-menu-item {
   height: 100%;
   padding: 0 20px; /* Adds padding for better tap area */
@@ -3228,6 +3199,8 @@ main menu
   flex-shrink: 0; /* Prevents items from shrinking */
   transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
   gap: 8px; /* Space between icon and text */
+  scroll-snap-align: center; /* Center each item during snapping */
+  margin-right: 10px; /* Optional: spacing between items */
 }
 
 @media only screen and (min-width: 1400px) {
@@ -3253,4 +3226,25 @@ main menu
   .mobile-menu-item i {
     font-size: 18px; /* Increase icon size */
   }
+}
+
+.spacer {
+  height: 30px; /* Adds 10px of vertical space */
+  width: 100%; /* Ensures it takes the full width if needed */
+  display: block; /* Ensures it behaves as a block element */
+  content: ""; /* No visible content */
+}
+
+/*
+verticla layout
+*/
+
+.mobile-menu-vertical {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(223, 220, 210, 0.555);
+  z-index: 999;
 }
