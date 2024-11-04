@@ -66,7 +66,11 @@ function Header() {
                   className="menu-btn toggle_menu"
                   onClick={toggleMobileMenu}
                 >
-                  <i class="fa-solid fa-bars"></i>
+                  <i
+                    className={`fa-solid ${
+                      showMobileMenu ? "fa-times" : "fa-bars"
+                    }`}
+                  ></i>
                 </div>
               </div>
             </div>
